@@ -31,7 +31,33 @@
     font-size: 15px;
     line-height: 1.6;
   }
+/* 1. Hide the default ugly browser file input completely */
+.photo-zone input[type="file"],
+.about-photo input[type="file"] {
+  display: none !important;
+}
 
+/* 2. Style the photo zone wrappers to look like clickable cards */
+.photo-zone, .about-photo {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc; /* Gives it a clean, placeholder look */
+  border-radius: 12px;
+  padding: 30px 20px;
+  cursor: pointer; /* Makes the cursor a hand icon on hover */
+  background-color: #fafafa;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  position: relative;
+}
+
+/* 3. Add a nice subtle hover effect to guide the user */
+.photo-zone:hover, .about-photo:hover {
+  background-color: #f0f0f0; 
+  border-color: #999;
+  transform: translateY(-2px); /* Slight lift effect */
+}
   /* ── PAGE WRAPPER ── */
   .kit {
     max-width: 900px;
